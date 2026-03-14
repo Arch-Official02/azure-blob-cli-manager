@@ -1,0 +1,24 @@
+name: Deploy Azure Storage
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Azure Login
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+    - name: Run Deployment Script
+      run: |
+        chmod +x deploy.sh
+        ./deploy.sh
