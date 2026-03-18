@@ -55,10 +55,10 @@ delete)
 
 *)
     echo "Usage:"
-    echo "./storage.sh upload filename"
-    echo "./storage.sh download filename"
-    echo "./storage.sh list"
-    echo "./storage.sh delete filename"
+    echo "./arch.sh upload filename"
+    echo "./arch.sh download filename"
+    echo "./arch.sh list"
+    echo "./arch.sh delete filename"
 ;;
 
 esac
